@@ -1,0 +1,417 @@
+/* html body */
+* {
+	/* margin: 0;
+	padding: 0; */
+	box-sizing: border-box;
+}
+p {
+	font: normal 14px sans-serif;
+	color: #555;
+}
+
+/* div {
+	margin-bottom: 15px;
+} */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Quicksand", sans-serif;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 70px 50px;
+}
+
+
+/* header */
+header {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 35px 100px;
+	animation: 1s fadein 1s forwards;
+	opacity: 0;
+	color: white;
+	background-color: clear;
+	z-index: 2;
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+header h2 {
+	font-family: "Quicksand", sans-serif;
+}
+
+header nav {
+	display: flex;
+	margin-right: 50px;
+	font-family: "Quicksand", sans-serif;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+/* iphone screen size */
+@media (max-width: 414px ) {
+	header nav li {
+		margin: 0 15px;
+	}
+	a {		
+		font-weight: 300;
+	}
+}
+
+@media (max-width: 550px){
+	p {
+		font-size: 10px;
+	}
+}
+
+/* ipad screen size*/
+@media (max-width: 768px) {
+	header {
+		padding: 10px 50px;
+		margin-bottom: 15px;
+		flex-direction: column;
+	}
+
+	
+	header h2 {
+		margin-bottom: 15px;
+	}
+
+}
+
+/* make more roon on right hand nav so icon+menu item won't separate  */
+@media (max-width: 808px) {
+	header nav {
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 1100px) {
+	
+}
+
+i {
+	color: #e41818;
+	margin-right: 5px;
+}
+ul,
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	opacity: 1;
+	color: rgb(255, 0, 0);
+	font-weight: 700;
+}
+
+a:hover {
+	/* opacity: 0.75; */
+	color: white;
+}
+
+/* Hero Section*/
+.hero {
+	position: relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #fff;
+}
+
+.hero .background-image {
+	/* margin:0;
+	padding: 0;
+	box-sizing: border-box; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #80a3db;
+}
+
+.hero h1 {
+	font: bold 60px "Open Sans", sans-serif;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.hero h3 {
+	font: normal 28px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+}
+
+.hero a.btn {
+	padding: 20px 46px;
+}
+
+.hero-content-area {
+	opacity: 0;
+	margin-top: 10px;
+	animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+
+@media (max-width: 800px) {
+	
+
+	.hero h1 {
+		font-size: 48px;
+	}
+
+	.hero h3 {
+		font-size: 24px;
+	}
+
+	.hero a.btn {
+		padding: 15px 40px;
+	}
+}
+
+/* Meridian Section */
+#meridian {
+	background-color: antiquewhite;
+}
+#flexContainer1 {  
+	height: 100%;
+	/* width: auto; */
+	/* margin: auto; */
+	display: flex;
+	justify-content: center;
+	/* flex-basis: 400px; */
+  flex-flow: row wrap;
+  /* flex: 0 1 400px; */
+  
+}
+
+.flexItem1 {
+	/* width: 520px; */
+	background-color: white;
+	padding: 20px;
+	display: flex;
+	flex: 0 1 570px;
+	flex-flow: column;
+	/* justify-content: center; */
+	margin: 1em;
+	border-radius: 0.25em;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
+	transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.flexItem1:hover {
+	box-shadow: 0px 10px 50px rgba(0,0,0,0.20);
+	transform: scale(1.5);
+}
+
+/* img {
+	width: 100%;
+	height: auto;
+	background-color: lightgrey;
+	margin-bottom: 1em;
+	border-radius: 0.25em;
+	background-size: cover;
+} */
+
+/* h3 {
+	width: 100%;
+	font-weight: 700;
+} */
+
+/* p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 100%;
+	height: 75px;
+	font-weight: 300;
+} */
+
+#description1 {
+	width: 100%;
+	height: 150px;
+}
+
+/* seasonAcu Section  */
+.flipswitch {
+	position: relative;
+	width: 128px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select: none;
+  }
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 50px;
+}
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -ms-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 24px;
+  padding: 0;
+  line-height: 24px;
+  font-size: 18px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flipswitch-inner:before {
+  content: "Northern";
+  padding-left: 12px;
+  background-color: #256799;
+  color: #FFFFFF;
+}
+.flipswitch-inner:after {
+  content: "Southern";
+  padding-right: 12px;
+  background-color: #256799;
+  color: #FFFFFF;
+  text-align: right;
+}
+.flipswitch-switch {
+  width: 28px;
+  margin: -2px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 102px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+right: 0;
+}
+h2 {
+display: inline-flex;
+font-size: 2em;
+}
+
+
+#flexContainer2 {  
+	height: 100%;
+	/* width: auto; */
+	/* margin: auto; */
+	display: flex;
+	justify-content: center;
+	/* flex-basis: 400px; */
+  flex-flow: row wrap;
+  /* flex: 0 1 400px; */
+}
+
+.flexItem2 {
+	/* width: 520px; */
+	background-color: white;
+	padding: 25px;
+	display: flex;
+	flex: 0 1 370px;
+	flex-flow: column;
+	justify-content: center;
+	margin: 1em;
+	border-radius: 0.25em;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.20);
+	transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.flexItem2:hover {
+	box-shadow: 0px 10px 50px rgba(0,0,0,0.20);
+	transform: scale(1.01);
+}
+
+img {
+	width: 100%;
+	/* height: auto; */
+	background-color: lightgrey;
+	margin-bottom: 1em;
+	border-radius: 0.25em;
+	background-size: cover;
+}
+
+h3 {
+	width: 100%;
+	font-weight: 700;
+}
+#seasonText {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+}
+button {
+	font-size: 19px;
+	font-weight: 400;
+}
+
+button:hover {
+	font-size: 20px;
+	font-weight: 700;
+}
+/* p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 100%;
+	height: 75px;
+	font-weight: 300;
+} */
+
+#description {
+	width: 100%;
+	height: 250px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position 
+   https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color:#aa8c8c;;
+  }
+
