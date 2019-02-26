@@ -415,3 +415,16 @@ button:hover {
 	background-color:#aa8c8c;;
   }
 
+  form {
+	  width: 600px;
+  }
+  input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #666260;
+    border: 1px solid #c4beb9;
+    background: #fff;
+    padding: 1em;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
