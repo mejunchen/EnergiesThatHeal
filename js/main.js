@@ -2,6 +2,17 @@ var mm = 0;
 var hemisphere = "";
 var cSeason;
 
+// Scrolling Effect
+$(window).on("scroll", function() {
+  if($(window).scrollTop()) {
+        $('nav').addClass('green');
+  }
+
+  else {
+        $('nav').removeClass('green');
+  }
+})
+
 var seasonList = {
   spring: {nextSeason: 'summer', photos:[], descriptions:[]},
   summer: {nextSeason: 'autumn', photos:[], descriptions:[]},
