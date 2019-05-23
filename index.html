@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
-  <header id="navbar">
+  <header>
       <nav>
     <a href="#"><i class="fa fa-home fa-2x"></i></a>
     <ul>
@@ -28,27 +28,27 @@
 
   <section class="hero">
     <div class="background-image" style="background-image: url(img/blueSpring.jpg)"></div>
-    <div class="hero-content-area">
-      <h2>A Brief Intro to Acupressure and Oriental View on Food. For People with Yang Deficient</h2>
-      <h2>This website could help if you have the following symptoms: Always feeling cold/cold limbs; difficulties with digestion; hypo-activity; a fat or scalloped tongue.</h2> 
+    <div class="hero-content-area" style="margin: 1em 1em">
+      <h2 style="margin: 1em 3em">A Brief Intro to Acupressure and Oriental View on Food. For People with Yang Deficient</h2>
+      <h2 style="margin: 1em 3em">This website could help if you have the following symptoms: Always feeling cold/cold limbs; difficulties with digestion; hypo-activity; a fat or scalloped tongue.</h2> 
       <h3> </h3>
     </div>
   </section>
   
     <!-- main body -->
   <section id="meridian">
-    <div>
+    <div style="margin: 1em 1em">
       <h2>Practical with Meridians</h2>
-      <h4>In the book "The Energy That heals", Jacques Staehle described two aspects of the practices with the meridian. First, the Meridians are network of energy said to cover the human body, connected with internal organs. 
+      <p>In the book "The Energy That heals", Jacques Staehle described two aspects of the practices with the meridian. First, the Meridians are network of energy said to cover the human body, connected with internal organs. 
         Pain or discomfort sometime is the signal that there could be something wrong with one's organs or organicism.
          Cards below show some of the pain associated with the meridians, get to know those meridians and you could be your own doctor by treating the discomfort yourself. So what do you do if you feel pain in parts of your body?
-        <ul>
+        <ol>
           <li>Boost the Jing points on both sides;</li>
           <li>Boost the Booster point on the same side as the pain;</li>
           <li>Disperse the points surrounding the pain;</li>
           <li>Boost the Meeting points on both sides.</li>
-        </ul>
-      </h4>
+        </ol>
+      </p>
     </div>
     <div id="flexContainer1">
       <div class="flexItem1">
@@ -174,7 +174,7 @@
 
 
     <section class="container" id="seasonAcu">
-      <div>
+      <div style="margin: 1em 1em">
           <h2>Balance with Meridians</h2>
           <h4>The second important aspect Jacques Staehle described is acupoint to boost 
             a meridian in seasons. This section show the acupoints you can use to boost meridians in a season. </h4>
@@ -199,12 +199,12 @@
         </span>
       </div>
       <div id="seasonText">
-        <div style="margin-right: 15px">
+        <div style="margin-right: 1em">
           <h3>Season - <span id="season"></span>
           </h3>
         </div>
         <div>
-          <button onclick = "view.season(seasonList[cSeason].nextSeason)"><a href="#acupressure" style="color:rgb(37, 72, 190)">Next Season</a></button>
+          <button class="button" onclick = "view.season(seasonList[cSeason].nextSeason)"><a href="#acupressure" style="color:rgb(37, 72, 190)">Next 下</a></button>
         </div>
       </div>
       <div id="currentSeason">
@@ -213,7 +213,8 @@
             
     </section>
     
-    <section id="food" style="background-color : #D46A6A; color: rgb(45, 16, 90)">
+    <section id="food" style="background-color : #D46A6A; color: rgb(45, 16, 90);">
+      <div style="margin: 1em 1em">
       <h1>Food === Medicine?</h1>
       <h4>Ancient Chinese knew medicine and food are originated from same source, and defined that when you eat with an empty stomach, it is food; 
         when you eat while ill, it is medicine. But then Chinese are known to have a phrase: 
@@ -237,16 +238,18 @@
           <li>Food for thought: Pray before your meal, food needs to be accompanied by good mood...</li>
         </strong>
       </ol>
+    </div>
     </section>
 
     <section id="contact" style="background-color : rgb(235, 235, 235)">
-      <h2>Please let me know if you have any question: </h2>
+    <div>
+      <h2  style="margin: 1em 1em">Please let me know if you have any question: </h2>
       <form method="POST" action="https://formspree.io/junchen@xtra.co.nz">
-        <div><input type="email" name="email" placeholder="Your email"></div>
-        <div><textarea name="message" placeholder="Your Message"></textarea></div>
-        <button type="submit">Send Message</button>
+        <div  style="margin: 1em 1em"><input type="email" name="email" placeholder="Your email"></div>
+        <div  style="margin: 1em 1em"><textarea name="message" placeholder="Your Message"></textarea></div>
+        <button type="submit"  style="margin: 1em 3em">Send Message</button>
       </form>
-    
+    </div>
     </section>
 
 

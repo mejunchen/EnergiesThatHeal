@@ -2,32 +2,37 @@ html body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-size: 100%;
 	font-family: "Quicksand", sans-serif;
 }
-p {
-	color: #555;
+ 
+/**
+ * 1. Apply rule to all browsers
+ * 2. Override WebKit browsers, because Safari needs percentages to work
+ * 3. Override IE/Edge, because Edge applies previous -webkit-calc() and 
+ *    won't work with percentages
+ */
+@media screen and (min-width: 400px) {
+  html {
+	font-size: calc(1em + 4* (100vw - 400px) / 600);  /* 1  16px - 20px */
+    /*font-size: calc(0.875em + 6* (100vw - 400px) / 800);  1  14px - 20px */
+   /*  font-size: -webkit-calc(87.5% + 0.25 * (100vw - 8000%) / 40); 2 */
+   /* font-size: -ms-calc(0.875em + 0.25 * (100vw - 80em) / 40); 3 */
+  }
+}
+ 
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 1.25em;
+  }
 }
 
-h1 {
-	font-size: 5.0vw;
-}
-h2 {
-font-size: 3.5vw;
-}
-
-h4 {
-	font-size: 2vw;
-}
-
-p li {
-font-size: 2vmin;
-}
 
 section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 70px 50px;
+	/* padding: 4.375em 3.125em; */
 }
 
 
@@ -36,6 +41,7 @@ header nav {
 	position: fixed;
 	margin: 0;
 	padding: 0;
+	font-size: 1.5em;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -51,17 +57,14 @@ header nav {
 	}
 }
 
-header h2 {
-	font-family: "Quicksand", sans-serif;
-}
-
 header ul {
 	display: flex;
-	font-family: "Quicksand", sans-serif;
+		margin: 0;
+		padding-inline-start: 0;
 }
 
 header nav li {
-	margin: 0 15px;
+	margin: 0 0.125em;
 }
 
 nav.green {
@@ -72,7 +75,6 @@ form {
 	width: 400px;
 }
 input, textarea {
-	font-family: 'Open Sans', sans-serif;
 	color: #666260;
 	border: 1px solid #c4beb9;
 	background: #fff;
@@ -94,7 +96,7 @@ nav {
 a {
 	text-decoration: none;
 	opacity: 1;
-	margin: 2px 40px 2px 30px;
+	margin: 0.125em 2.5em 0.125em 1.875em;
 	color: rgb(255, 0, 0);
 	font-weight: 600;
 }
@@ -104,19 +106,6 @@ a:hover {
 	color: white;
 }
 
-@media (max-width: 700px) {
-	nav {
-		
-		justify-content: flex-start;
-	}
-	ul {
-		margin: 0;
-		padding-inline-start: 0;
-	}
-	a {
-		margin: 2px 5px 2px 5px;
-	}
-}
 /* Hero Section*/
 .hero {
 	position: relative;
@@ -336,19 +325,34 @@ h3 {
 	flex-flow: row;
 	align-items: center;
 }
-button {
-	font-size: 19px;
-	font-weight: 400;
+.button {
+	background-color: #4CAF50;
+	font-size: 1em;
+	cursor: pointer;
 }
 
-button:hover {
-	font-size: 20px;
-	font-weight: 700;
+.button:hover {
+	background-color:#008CBA;
+	color: white;
 }
 
 #description {
 	width: 100%;
-	height: 250px;
+	height: 21em;
+}
+
+@media (max-width: 850px) {
+	nav {		
+		justify-content: flex-start;
+	}
+	/* ul {
+		margin: 0;
+		padding-inline-start: 0;
+	} */
+	a {
+		margin: 2px 5px 2px 5px;
+	}
+	
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position 
